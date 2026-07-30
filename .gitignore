@@ -4,3 +4,4 @@ node_modules/
 results.ndjson
 assets/img/
 products-made.json
+category-blocks/products/_*.json
