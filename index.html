@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Myarredo — SEO-оптимизация · демо для заказчика</title>
+<style>
+  :root{--g:#3aa34a;--g2:#1f7a34;--ink:#1f1f1f;--mut:#5a6172;--bd:#e0ece1;--bg:#f5f7f5;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'PT Sans','Segoe UI',system-ui,Arial,sans-serif;line-height:1.6}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  header{background:linear-gradient(135deg,#2e8b3e,#3aa34a);color:#fff;padding:38px 0 30px}
+  header h1{margin:0 0 8px;font-size:30px;letter-spacing:-.3px}
+  header p{margin:0;opacity:.95;font-size:16px;max-width:70ch}
+  .note{background:#fff;border:1px solid var(--bd);border-left:4px solid var(--g);border-radius:10px;padding:14px 18px;margin:22px 0;font-size:14.5px;color:var(--mut)}
+  .note b{color:var(--ink)}
+  h2.sec{font-size:20px;margin:30px 0 12px;color:var(--g2);border-bottom:2px solid var(--bd);padding-bottom:8px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+  .card{background:#fff;border:1px solid var(--bd);border-radius:12px;padding:18px 20px;display:flex;flex-direction:column}
+  .card h3{margin:0 0 6px;font-size:17px}
+  .card p{margin:0 0 14px;font-size:13.7px;color:var(--mut);flex:1}
+  .links a{display:inline-block;margin:0 8px 8px 0;padding:8px 14px;border-radius:8px;text-decoration:none;font-size:13.5px;font-weight:600}
+  .links a.full{background:var(--g);color:#fff}
+  .links a.full:hover{background:#2e8b3e}
+  .links a.prev{background:#eef6ef;color:var(--g2);border:1px solid var(--bd)}
+  .links a.prev:hover{background:#e2f0e4}
+  footer{color:var(--mut);font-size:13px;padding:26px 0 44px;border-top:1px solid var(--bd);margin-top:34px}
+  .badge{display:inline-block;background:#eef6ef;color:var(--g2);font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:14px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="badge" style="background:rgba(255,255,255,.2);color:#fff">SEO-демо · myarredo.by</div>
+  <h1>Оптимизированные страницы Myarredo</h1>
+  <p>Демонстрация SEO-оптимизации интернет-магазина итальянской мебели: мета-теги, микроразметка Schema.org, alt, canonical и развёрнутые SEO-тексты с таблицами и FAQ — в фирменном стиле сайта.</p>
+</div></header>
+
+<div class="wrap">
+  <div class="note">
+    <b>Как смотреть.</b> «Полная страница» — клон реальной страницы с применённой оптимизацией (стили и фото подтягиваются с боевого сайта). «SEO-блок» — гарантированный рендер текста/таблиц/FAQ. Полный охват всех 68&nbsp;831 страницы выполняется через шаблоны CMS с автозаполнением из полей — см. <a href="docs/SEO-STRATEGY.md">SEO-стратегию</a> и <a href="README.md">README</a>.
+  </div>
+
+  <h2 class="sec">Главная</h2>
+  <div class="grid">
+    <div class="card"><h3>Главная страница</h3><p>Модернизированный вводный текст, блок «Отправьте запрос — гарантия лучшей цены» (5 карточек) и развёрнутый SEO-текст с таблицами категорий, брендов и стилей + 8 FAQ.</p>
+      <div class="links"><a class="full" href="demo/home.html">Полная страница</a><a class="prev" href="demo/preview-home-seo.html">SEO-текст</a><a class="prev" href="demo/preview-home-promo.html">Блок «Лучшая цена»</a></div></div>
+  </div>
+
+  <h2 class="sec">Карточка товара</h2>
+  <div class="grid">
+    <div class="card"><h3>Диван ARKETIPO Lotus</h3><p>Верхнее описание + таблица характеристик (фабрика, дизайнер Manzoni e Tapinassi, коллекция, каркас, наполнение, размеры), JSON-LD Product/Offer/Breadcrumb/FAQPage, alt, и нижний SEO-текст с 5 таблицами и 8 FAQ.</p>
+      <div class="links"><a class="full" href="demo/product-arketipo-lotus.html">Полная карточка</a><a class="prev" href="demo/preview-product-top.html">Верхнее описание</a><a class="prev" href="demo/preview-product-seo.html">SEO-текст + FAQ</a></div></div>
+  </div>
+
+  <h2 class="sec">Категории (7 типов)</h2>
+  <div class="grid">
+    <div class="card"><h3>Кухни</h3><p>Scavolini, Cesar, Aster Cucine · фасады Fenix/эмаль · столешницы Silestone/Laminam/Dekton · фурнитура Blum/Salice. Таблицы типов, фасадов, столешниц, фурнитуры + 8 FAQ.</p>
+      <div class="links"><a class="full" href="demo/category-mebel-dlya-kuhni.html">Полная страница</a><a class="prev" href="demo/preview-kuhni.html">SEO-текст</a></div></div>
+    <div class="card"><h3>Спальни</h3><p>Camelgroup, Alf Italia, Arredoclassic · массив дуба/ореха · эмаль/патина · ламели, газлифт, Blum. Состав гарнитура, материалы, механизмы, стили + 8 FAQ.</p>
+      <div class="links"><a class="full" href="demo/category-mebel-dlya-spalni.html">Полная страница</a><a class="prev" href="demo/preview-spalni.html">SEO-текст</a></div></div>
+    <div class="card"><h3>Гостиные</h3><p>Natuzzi, Ditre Italia, Cattelan Italia, Cassina. Состав гостиной, материалы, бренды, стили + 8 FAQ.</p>
+      <div class="links"><a class="full" href="demo/category-mebel-dlya-gostinoj.html">Полная страница</a><a class="prev" href="demo/preview-gostinaya.html">SEO-текст</a></div></div>
+    <div class="card"><h3>Мягкая мебель</h3><p>Natuzzi, Ditre Italia, Poltrona Frau · кожа Nappa · HR-foam, Pocket spring · реклайнер. Виды, наполнение, обивка, механизмы + 8 FAQ.</p>
+      <div class="links"><a class="full" href="demo/category-myagkaya-mebel.html">Полная страница</a><a class="prev" href="demo/preview-myagkaya-mebel.html">SEO-текст</a></div></div>
+    <div class="card"><h3>Столовая</h3><p>Calligaris, Cattelan Italia, Arredoclassic · раздвижные столы · столешницы керамика/мрамор/стекло. Состав, столешницы, механизмы, размеры + 8 FAQ.</p>
+      <div class="links"><a class="full" href="demo/category-mebel-dlya-stolovoj.html">Полная страница</a><a class="prev" href="demo/preview-stolovaya.html">SEO-текст</a></div></div>
+    <div class="card"><h3>Стулья</h3><p>Cattelan Italia, Calligaris · обеденные/барные/полубарные · каркас массив/металл · кожа/велюр/рогожка. Виды, каркас, обивка, высота + 8 FAQ.</p>
+      <div class="links"><a class="full" href="demo/category-stulya.html">Полная страница</a><a class="prev" href="demo/preview-stulya.html">SEO-текст</a></div></div>
+    <div class="card"><h3>Освещение</h3><p>Люстры, бра, торшеры, подвесы · муранское стекло, хрусталь, LED, диммирование · Barovier &amp; Toso, Vistosi, Masiero. Типы, материалы, технологии + 8 FAQ.</p>
+      <div class="links"><a class="full" href="demo/category-svetilniki.html">Полная страница</a><a class="prev" href="demo/preview-svetilniki.html">SEO-текст</a></div></div>
+  </div>
+
+  <footer>
+    <b>Myarredo SEO-демо</b> · оптимизация мета, Schema.org, alt, canonical и SEO-текстов ·
+    полный охват — через шаблоны CMS. Репозиторий: templates/ (фрагменты для внедрения), toolkit/ (аудит и генерация), docs/ (стратегия).
+  </footer>
+</div>
+</body>
+</html>
