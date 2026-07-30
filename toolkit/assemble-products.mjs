@@ -11,7 +11,7 @@ const made=[];
 for(const p of prods){
   const topF=new URL('category-blocks/products/'+p.slug+'-top.html',root), seoF=new URL('category-blocks/products/'+p.slug+'-seo.html',root);
   if(!existsSync(topF)||!existsSync(seoF)){console.error('missing blocks',p.slug);continue;}
-  const top=readFileSync(topF,'utf8'), seo=readFileSync(seoF,'utf8');
+  const top=readFileSync(topF,'utf8'); let seo=readFileSync(seoF,'utf8'); /*STRIP_H2_QUOTES*/ seo=seo.replace(/(<h2[^>]*>)([\s\S]*?)(<\/h2>)/i,(m,a,t,c)=>a+t.replace(/[«»"]/g,'').trim()+c);
   let html=await (await fetch(p.url,{headers:H})).text();
   html=html.replace(/<head([^>]*)>/i,m=>m+`\n<base href="${p.url}">`);
   const h2=(seo.match(/<h2[^>]*>([\s\S]*?)<\/h2>/i)||[])[1]?.replace(/<[^>]+>/g,'').trim()||p.name;
