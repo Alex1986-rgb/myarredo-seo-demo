@@ -20,6 +20,14 @@ if (!existsSync(OUT)) mkdirSync(OUT, { recursive: true });
 
 // ---------- LLM call (returns JSON {top, seo}) ----------
 async function callLLM(system, user) {
+  if (PROVIDER === 'router') {
+    const base = process.env.ROUTER_CHEAP_BASE_URL || 'https://router.cheap/v1';
+    const r = await fetch(base.replace(/\/$/,'') + '/chat/completions', { method:'POST',
+      headers:{ 'Authorization':'Bearer '+process.env.ROUTER_CHEAP_API_KEY, 'Content-Type':'application/json' },
+      body: JSON.stringify({ model: process.env.ROUTER_MODEL||'gpt-5.5', temperature:0.7,
+        messages:[{role:'system',content:system},{role:'user',content:user+'\n\nОтветь строго JSON: {"top":"...","seo":"..."}'}] }) });
+    return (await r.json()).choices[0].message.content;
+  }
   if (PROVIDER === 'openai') {
     const r = await fetch('https://api.openai.com/v1/chat/completions', { method:'POST',
       headers:{ 'Authorization':'Bearer '+process.env.OPENAI_API_KEY, 'Content-Type':'application/json' },
