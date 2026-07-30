@@ -1,0 +1,108 @@
+{
+  "crawl": {
+    "total": 68831,
+    "status": {
+      "0": 5,
+      "200": 67530,
+      "404": 1048,
+      "410": 248
+    },
+    "byType": {
+      "other": 404,
+      "factory": 1167,
+      "catalog": 707,
+      "home": 2,
+      "product": 66551
+    },
+    "errors": 5
+  },
+  "content": {
+    "indexable200": 67530,
+    "noindex": 777,
+    "titleMissing": 0,
+    "titleLong": 38621,
+    "titleSum": 4377042,
+    "descMissing": 30,
+    "descLong": 61823,
+    "descShort": 2,
+    "descSum": 13487983,
+    "h1_zero": 2,
+    "h1_multi": 725,
+    "canonicalMissing": 122,
+    "imgTotal": 5542020,
+    "imgNoAlt": 1020443,
+    "pagesWithMissingAlt": 67530,
+    "hasBreadcrumb": 67494,
+    "titleAvg": 65,
+    "descAvg": 200,
+    "altMissingPct": 18.4
+  },
+  "products": {
+    "total": 65919,
+    "hasProduct": 0,
+    "hasOffer": 0,
+    "missingProduct": 65919
+  },
+  "type200": {
+    "other": 165,
+    "factory": 851,
+    "catalog": 593,
+    "home": 2,
+    "product": 65919
+  },
+  "problem": {
+    "404": [
+      "https://www.myarredo.by/catalog/c---stul---s---calligaris/",
+      "https://www.myarredo.by/catalog/italiyanskaya-gostinaya/",
+      "https://www.myarredo.by/factory/colombo-mobili/",
+      "https://www.myarredo.by/factory/ciacci/",
+      "https://www.myarredo.by/factory/pm4/",
+      "https://www.myarredo.by/factory/poliform/",
+      "https://www.myarredo.by/factory/arredo-3/",
+      "https://www.myarredo.by/factory/bordignon-camillo/",
+      "https://www.myarredo.by/factory/borgo-pitti/",
+      "https://www.myarredo.by/factory/mirandola/",
+      "https://www.myarredo.by/factory/mobileffe/",
+      "https://www.myarredo.by/factory/moda-by-mode-di-liddo/",
+      "https://www.myarredo.by/factory/nature-design-franco-mario/",
+      "https://www.myarredo.by/factory/nicolaquinto/",
+      "https://www.myarredo.by/factory/frari/",
+      "https://www.myarredo.by/factory/futura-srl-milano/",
+      "https://www.myarredo.by/factory/granducato/",
+      "https://www.myarredo.by/factory/idealsedia/",
+      "https://www.myarredo.by/factory/jesse-spa/",
+      "https://www.myarredo.by/factory/marchi-group/"
+    ],
+    "410": [
+      "https://www.myarredo.by/catalog/c--aksessuary-dlya-vannoi/",
+      "https://www.myarredo.by/catalog/c--aksessuary/",
+      "https://www.myarredo.by/catalog/c--baza-pod-rakovinu/",
+      "https://www.myarredo.by/catalog/c--baldakhin-dlya-krovati/",
+      "https://www.myarredo.by/catalog/c--harp/",
+      "https://www.myarredo.by/catalog/c--banketka/",
+      "https://www.myarredo.by/catalog/c--bar/",
+      "https://www.myarredo.by/catalog/c--barnaya-stojka/",
+      "https://www.myarredo.by/catalog/c--bra/",
+      "https://www.myarredo.by/catalog/c--barniy_stol/",
+      "https://www.myarredo.by/catalog/c--barnyj-stul/",
+      "https://www.myarredo.by/catalog/c--buazery/",
+      "https://www.myarredo.by/catalog/c--besedka/",
+      "https://www.myarredo.by/catalog/c--bufet/",
+      "https://www.myarredo.by/catalog/c--vaza/",
+      "https://www.myarredo.by/catalog/c--vesalka/",
+      "https://www.myarredo.by/catalog/c--vinnaya-mebel/",
+      "https://www.myarredo.by/catalog/c--vitrina/",
+      "https://www.myarredo.by/catalog/c--gazetnica/",
+      "https://www.myarredo.by/catalog/c--gostinaya/"
+    ],
+    "3xx": [],
+    "5xx": [],
+    "err": [
+      "https://www.myarredo.by/catalog/?page=6",
+      "https://www.myarredo.by/catalog/?page=8",
+      "https://www.myarredo.by/catalog/?page=13",
+      "https://www.myarredo.by/catalog/?page=16",
+      "https://www.myarredo.by/catalog/?page=18"
+    ]
+  }
+}
