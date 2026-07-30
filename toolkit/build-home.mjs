@@ -9,6 +9,19 @@ html=html.replace(/<title>[\s\S]*?<\/title>/i,'<title>Итальянская м�
 html=html.replace(/<meta\s+name=["']description["'][^>]*>/i,'<meta name="description" content="Итальянская мебель в Минске по фабричным ценам: кухни, гостиные, спальни, мягкая мебель, стулья. Прямые поставки с фабрик Италии, доставка по Беларуси.">');
 html=bal(html,'<div class="best-price">',readFileSync(new URL('templates/home-promo.html',root),'utf8'));
 const css=readFileSync(new URL('templates/category-seo.css.html',root),'utf8');
-html=bal(html,'<div class="post-cont">',css+readFileSync(new URL('templates/home-seo-block.html',root),'utf8'));
+const seoBlock=readFileSync(new URL('templates/home-seo-block.html',root),'utf8');
+html=bal(html,'<div class="post-cont">',css+seoBlock);
+
+// --- JSON-LD: WebSite (+SearchAction) + FAQPage from the home SEO FAQ ---
+const esc=s=>s.replace(/<[^>]+>/g,'').replace(/\s+/g,' ').replace(/"/g,'\\"').trim();
+const faqs=[...seoBlock.matchAll(/<div class="q">[\s\S]*?<\/span>([\s\S]*?)<\/div>\s*<div class="a">([\s\S]*?)<\/div>/g)]
+  .map(m=>`{"@type":"Question","name":"${esc(m[1])}","acceptedAnswer":{"@type":"Answer","text":"${esc(m[2])}"}}`);
+const ld=`<script type="application/ld+json">${JSON.stringify({
+  "@context":"https://schema.org","@type":"WebSite","name":"Myarredo","url":url,
+  "inLanguage":"ru-BY",
+  "potentialAction":{"@type":"SearchAction","target":url+"search/?q={search_term_string}","query-input":"required name=search_term_string"}
+})}</script>\n<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[${faqs.join(',')}]}</script>`;
+html=html.replace(/<\/head>/i, ld+'\n</head>');
+
 writeFileSync(new URL('demo/home.html',root),html);
-console.error('home JS-on rebuilt',html.length);
+console.error('home JS-on rebuilt',html.length,'| FAQPage items:',faqs.length);
